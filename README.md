@@ -2,7 +2,7 @@
 
 Materials for the *Machine Learning for Time-Series Data* CBIOMES workshop.
 
-This repository contains tutorials, datasets, and examples used throughout the workshop.
+This repository contains tutorials and datasets used throughout the workshop.
 
 ---
 
@@ -46,13 +46,18 @@ We recommend completing this step before the workshop begins.
 
 ```
 ml_cbiomes/
-├── tutorials/   # Workshop tutorials (main content)
-├── data/        # Shared datasets and data access instructions
+├── tutorials/                      # Workshop tutorials (main content)
+│   └── neural_networks_missing_data/
+├── data/                           # Datasets used in tutorials and hackathon
+│   ├── hot_aloha/
+│   └── hackathon_data/
 ├── README.md
 ```
 
-* `tutorials/`: Step-by-step notebooks and exercises
-* `data/`: Small datasets and instructions for accessing external data (e.g., CMAP)
+- `tutorials/`: Step-by-step notebooks and exercises  
+- `data/`: Datasets used in tutorials and for exploration  
+    - `hot_aloha/`: dataset used in the neural networks missing data tutorial  
+    - `hackathon_data/`: datasets for open-ended exploration during the hackathon  
 
 ---
 
