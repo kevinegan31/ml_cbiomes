@@ -44,15 +44,7 @@ We recommend completing this step before the workshop begins.
 
 ## Repository Structure
 
-```
-ml_cbiomes/
-├── tutorials/                      # Workshop tutorials (main content)
-│   └── neural_networks_missing_data/
-├── data/                           # Datasets used in tutorials and hackathon
-│   ├── hot_aloha/
-│   └── hackathon_data/
-├── README.md
-```
+Disclaimer: This is not the final version, we recommend pulling the final version before Day One or throughout the workshop as we go.
 
 - `tutorials/`: Step-by-step notebooks and exercises  
 - `data/`: Datasets used in tutorials and for exploration  
