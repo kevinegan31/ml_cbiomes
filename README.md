@@ -67,13 +67,13 @@ This will launch JupyterLab inside the container.
 
 ### 5. Test your setup
 
-After launching JupyterLab, navigate to the repository folder, open the notebook, select the `Workshop Python` kernel, and run:
+After launching JupyterLab, navigate to the repository folder, open the notebook, select the `Python-ANN` kernel, and run:
 
 `linear_regression_example.ipynb`
 
 This notebook is included as a simple test to confirm that the container is working properly.
 
-If you encounter a `ModuleNotFoundError`, make sure the notebook is using the `Workshop Python` kernel (not `python3`).
+If you encounter a `ModuleNotFoundError`, make sure the notebook is using the `Python-ANN` kernel (not `python3`).
 
 For more detailed Docker setup instructions (optional), see [`containers.md`](containers.md).
 
