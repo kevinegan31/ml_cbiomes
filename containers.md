@@ -14,7 +14,7 @@ Containers are supported natively by modern ARM, Intel, and AMD processors. Thes
 
 Containers are also supported natively by the major OS releases. Windows Subsystem for Linux (WSL) is simply a convoluted name for containers. On macOS, the `container` command-line package implements them. On Linux, `podman` and others provide support.
 
-One of the easiest ways across all OS distributions to utilize containers is with the Docker software. If you already have your own container software, and are experienced with it, feel free to install the [workshop container](https://hub.docker.com/repository/docker/powellb/cbiomes-ml/general) yourself (`docker pull powellb/cbiomes-ml:2026`).
+One of the easiest ways across all OS distributions to utilize containers is with the Docker software. If you already have your own container software, and are experienced with it, feel free to install the workshop container yourself (`docker pull powellb/cbiomes-ml:2026`).
 
 
 ## Docker Container
@@ -49,7 +49,7 @@ Type `powellb/cbiomes` in the search bar at the top of the window to search for 
 While it is downloading, you should clone the workshop github onto your local machine. The github directory is going to be shared with the container so that you will have all of the files for the workshop, you can add files, use them in the container, and the container will save its files there. Because the container cannot access your machine on its own, it needs this directory so you can do your work, save it, and submit it.
 
 
-## Configure the Workshop Container <a id="org420dd4a"></a>
+## Configure the Workshop Container <a id="org78ba35b"></a>
 
 Once Docker Desktop has completed downloading the workshop *image*, you are ready to create a new *container* that you will use for the workshop. Click the `Run` button (NOTE: if it is still showing the display where it was downloading, there is a `Run` button). If it is showing the list of images you have downloaded, there will be a play icon &ldquo;▶&rdquo; instead. Once you click to Run, it will present a dialog to allow you to set the configuration for the workshop. Click `Optional Settings`, and fill it out as shown below.
 
