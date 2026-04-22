@@ -86,7 +86,7 @@ RUN set -ex \
     'r-data.table' \
     'r-plotly' \
     # Install TensorFlow
-    && mamba create --quiet --yes --name Python \
+    && mamba create --quiet --yes --name Python-ANN \
     'python=3.12' \
     'ipykernel' \
     'ipympl' \
@@ -111,11 +111,11 @@ RUN R -e "install.packages('bigtime', repos='https://cloud.r-project.org')"
 RUN R -e "install.packages(c('satellite', 'mapview', 'otelsdk'), repos='https://ftp.osuosl.org/pub/cran/')"
 RUN R -e "pkgbuild::with_build_tools(remotes::install_github('simonscmap/cmap4r/cmap4r',upgrade = 'never'),required = FALSE)"
 RUN R -e "IRkernel::installspec(name='ir44', displayname='R')"
-SHELL ["mamba","run","-n","Python","/bin/bash","-c"]
+SHELL ["mamba","run","-n","Python-ANN","/bin/bash","-c"]
 RUN pip install tensorflow
 RUN pip install git+https://github.com/dynamicslab/pysindy.git
 RUN pip install pycmap
-RUN python -m ipykernel install --user --name=Python
+RUN python -m ipykernel install --user --name=Python-ANN
 
 # Setup Jupyter notifications to not nag people
 COPY --chown=$NB_UID ./notification.jupyterlab-settings /home/${NB_USER}/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/notification.jupyterlab-settings
