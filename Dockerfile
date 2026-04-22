@@ -13,6 +13,9 @@ ENV LC_MESSAGES=en_US.UTF-8
 
 USER root
 
+# Set dummy password
+RUN echo 'root:root' | chpasswd
+
 # install the locales you want to use
 RUN set -ex \
     && sed -i 's/^# en_US.UTF-8 UTF-8$/en_US.UTF-8 UTF-8/g' /etc/locale.gen \
@@ -37,7 +40,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libtiff5-dev \
     libjpeg-dev \
     libgit2-dev \
-    libsecret-1-dev \
     && rm -rf /var/lib/apt/lists/*
 
 USER ${NB_UID}
@@ -108,7 +110,7 @@ RUN set -ex \
 RUN mamba shell init --shell bash
 SHELL ["mamba","run","-n","R","/bin/bash","-c"]
 RUN R -e "install.packages('bigtime', repos='https://cloud.r-project.org')"
-RUN R -e "install.packages(c('satellite', 'mapview', 'otelsdk'), repos='https://ftp.osuosl.org/pub/cran/')"
+RUN R -e "install.packages(c('satellite', 'mapview', 'otelsdk', 'keyring'), repos=c('https://ftp.osuosl.org/pub/cran/', 'https://mirror.chpc.utah.edu/pub/cran/'))"
 RUN R -e "pkgbuild::with_build_tools(remotes::install_github('simonscmap/cmap4r/cmap4r',upgrade = 'never'),required = FALSE)"
 RUN R -e "IRkernel::installspec(name='ir44', displayname='R')"
 SHELL ["mamba","run","-n","Python-ANN","/bin/bash","-c"]
