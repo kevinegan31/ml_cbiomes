@@ -14,7 +14,7 @@ Before the workshop, please try to complete the following:
 2. Pull the workshop container image
 3. Clone this repository to your local machine
 4. Generate a Simons CMAP API key (required for some tutorials)
-5. Run the [`linear_regression_example.ipynb`](linear_regression_example.ipynb) example to confirm that your setup is working.
+5. Run the `linear_regression_example.ipynb` notebook to confirm that your setup is working.
 
 If you are unable to complete any of these steps, please contact the event organizers.
 
@@ -44,7 +44,7 @@ Select the `2026` tag and pull the image.
 
 ### 3. Clone this repository
 
-Clone this repository to your local machine.
+Clone this repository to your local machine.  
 This folder will be mounted into the container so you can access workshop files and save your work.
 
 ```bash
@@ -57,8 +57,7 @@ cd ml_cbiomes
 When launching the container in Docker Desktop:
 
 - Choose a host port such as `8900`
-- Mount your local `ml_cbiomes` folder into the container at:
-`/notebooks`
+- Mount your local `ml_cbiomes` folder into the container at `/notebooks`
 
 Then open in your browser:
 
@@ -68,14 +67,15 @@ This will launch JupyterLab inside the container.
 
 ### 5. Test your setup
 
-After launching JupyterLab, navigate to the repository folder, open, and run using the `Python` environment:
+After launching JupyterLab, navigate to the repository folder, open the notebook, select the `Python` kernel, and run:
 
 `linear_regression_example.ipynb`
 
-
 This notebook is included as a simple test to confirm that the container is working properly.
 
-For more detailed Docker setup instructions, see [`containers.md`](containers.md).
+If you encounter a `ModuleNotFoundError`, make sure the notebook is using the `Python` kernel (not `python3`).
+
+For more detailed Docker setup instructions (optional), see [`containers.md`](containers.md).
 
 ---
 
@@ -102,14 +102,10 @@ This repository will be updated as workshop materials are finalized.
 Please pull the latest version before Day 1 and during the workshop as needed.
 
 - `tutorials/`: Step-by-step notebooks and exercises  
-- `data/`: Datasets used in tutorials and for exploration  
-    - `hot_aloha/`: dataset used in the neural networks missing data tutorial  
-    - `hackathon_data/`: datasets for open-ended exploration during the hackathon  
+- `data/`: Datasets used in tutorials and for exploration 
 
 ---
 
 ## Workshop Schedule
 
-### Day 1: Time-Series Methods
-### Day 2: Neural Networks + PINNs
-### Day 3: Hackathon
+![Workshop Schedule](figs/schedule.png)
