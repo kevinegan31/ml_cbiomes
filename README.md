@@ -108,4 +108,4 @@ Please pull the latest version before Day 1 and during the workshop as needed.
 
 ## Workshop Schedule
 
-![Workshop Schedule](figs/schedule.png)
+![Workshop Schedule](figs/ml_workshop_schedule.png)
