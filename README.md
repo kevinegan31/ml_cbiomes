@@ -2,80 +2,36 @@
 
 Materials for the *Machine Learning for Time-Series Data* CBIOMES workshop.
 
-This repository contains tutorials, datasets, and setup information used throughout the workshop.
+This repository contains tutorials, datasets, and setup instructions for the workshop.
 
 ---
 
-## Quick Start
+## Before the Workshop
 
-Before the workshop, please try to complete the following:
-
-1. Install Docker Desktop
-2. Pull the workshop container image
-3. Clone this repository to your local machine
-4. Generate a Simons CMAP API key (required for some tutorials)
-5. Run the `linear_regression_example.ipynb` notebook to confirm that your setup is working.
+Please complete the setup steps below and verify that everything is working.
 
 If you are unable to complete any of these steps, please contact the event organizers.
 
 ---
 
-## Docker Installation
+## Setup
 
 We will use a pre-built Docker container with all required dependencies for the workshop.
 
-### 1. Install Docker Desktop
+**Follow the full setup instructions here:** [`containers.md`](containers.md)
 
-Please install Docker Desktop for your operating system:
+In summary:
 
-- [macOS](https://docs.docker.com/desktop/install/mac-install/)
-- [Windows](https://docs.docker.com/desktop/install/windows-install/)
-- [Linux](https://docs.docker.com/desktop/install/linux-install/)
+1. Install Docker Desktop  
+2. Pull the workshop image: `powellb/cbiomes-ml:2026`  
+3. Clone this repository  
+4. Run the container and open JupyterLab (e.g., http://localhost:8900)
 
-If Docker is already installed, please make sure it is up to date.
-
-### 2. Pull the workshop image
-
-Open Docker Desktop, go to **Images**, and search for:
-
-`powellb/cbiomes-ml`
-
-Select the `2026` tag and pull the image.
-
-### 3. Clone this repository
-
-Clone this repository to your local machine.  
-This folder will be mounted into the container so you can access workshop files and save your work.
-
-```bash
-git clone https://github.com/kevinegan31/ml_cbiomes.git
-cd ml_cbiomes
-```
-
-### 4. Run the container
-
-When launching the container in Docker Desktop:
-
-- Choose a host port such as `8900`
-- Mount your local `ml_cbiomes` folder into the container at `/notebooks`
-
-Then open in your browser:
-
-`http://localhost:8900`
-
-This will launch JupyterLab inside the container.
-
-### 5. Test your setup
-
-After launching JupyterLab, navigate to the repository folder, open the notebook, select the `Python-ANN` kernel, and run:
+Then test your setup by running:
 
 `linear_regression_example.ipynb`
 
-This notebook is included as a simple test to confirm that the container is working properly.
-
-If you encounter a `ModuleNotFoundError`, make sure the notebook is using the `Python-ANN` kernel (not `python3`).
-
-For more detailed Docker setup instructions (optional), see [`containers.md`](containers.md).
+If you encounter issues, please contact the event organizers.
 
 ---
 
@@ -88,9 +44,9 @@ Some tutorials require access to the Simons CMAP database.
 3. Click on **Documentation** in the top menu
 4. Select **API Key**
 5. Click **Generate API Key**
-6. Save your key for use in the tutorials
+6. Save your key for use during the tutorials.
 
-You will use this key to access CMAP data via Python (`pycmap`) or R (`cmap4r`).
+You will use this key to access CMAP data via Python (`pycmap`).
 
 We recommend completing this step before the workshop begins.
 
