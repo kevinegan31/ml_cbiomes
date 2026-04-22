@@ -102,7 +102,7 @@ This repository will be updated as workshop materials are finalized.
 Please pull the latest version before Day 1 and during the workshop as needed.
 
 - `tutorials/`: Step-by-step notebooks and exercises  
-- `data/`: Datasets used in tutorials and for exploration 
+- `data/`: Datasets used in tutorials and for exploration
 
 ---
 
