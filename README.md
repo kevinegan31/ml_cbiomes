@@ -23,7 +23,7 @@ We will use a pre-built Docker container with all required dependencies for the 
 In summary:
 
 1. Install Docker Desktop  
-2. Pull the workshop image: `powellb/cbiomes-ml:2026`  
+2. In Docker Desktop, use the search bar to find and pull: `powellb/cbiomes-ml:2026`
 3. Clone this repository  
 4. Run the container and open JupyterLab (e.g., http://localhost:8900)
 
