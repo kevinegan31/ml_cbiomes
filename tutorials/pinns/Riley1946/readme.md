@@ -5,6 +5,16 @@
 
 ---
 
+There are 3 versions of the PINN code available:
+
+* `riley1946_pinn_pinn-tutorial.ipynb`: example with incomplete PINN and missing dynamics/physics loss
+* `riley1946_pinn_data-loading-only.ipynb`: least complete example; only the data is loaded and prepared
+* `riley1946_pinn_complete-example.ipynb`: complete example with full PINN implementation
+
+In addition, `riley1946_forward.ipynb` includes only the forward model introduced in Riley (1946) without a neural network.
+
+---
+
 ### Implement neural networks to emulate Riley's 1946 phytoplankton model
 
 Riley (1946) "Factors controlling phytoplankton populations on Georges Bank" is available [online](https://elischolar.library.yale.edu/journal_of_marine_research/624/).
